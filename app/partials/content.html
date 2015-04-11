@@ -1,0 +1,29 @@
+
+<div class="container">
+    <h2>blogs<h2>
+</div>
+<div class="container">
+
+        <!-- {{data}} -->
+        <table class="table ng-table-responsive">       
+             <thead>
+              <thead>
+                <tr>
+                    <th>title</th>
+                    <th>content</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="diary in diaries">
+                    <td> <a href="#/contentInfo/{{diary.Diary_text}}">
+                    {{diary.Diary_title}}</a></td>
+                    <td> <a href="#/contentInfo/{{diary.Diary_text}}">
+                    {{diary.Diary_text | limitTo:20}}</a></td>
+                    <td>
+                        <button type="button" ng-click="delete(diary.id)" class="btn btn-danger">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+        
